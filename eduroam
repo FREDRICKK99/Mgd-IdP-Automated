@@ -1,0 +1,139 @@
+server eduroam {
+
+    listen {
+        type = auth
+        ipaddr = *
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipaddr = *
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    listen {
+        type = auth
+        ipv6addr = ::
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipv6addr = ::
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    authorize {
+
+         update request {
+               Operator-Name := "1mgd-idp.renu.ac.ug"
+        }
+
+        filter_username
+        preprocess
+        chap
+        mschap
+        digest
+        eap {
+            ok = return
+        }
+        files
+        -sql
+        -ldap
+#        if( &Realm =="matabacus.ac.ug" ){
+#                ldap-Mat-Abacus
+#        }
+#        elsif( &Realm =="mbalehigh.sc.ug" ){
+#                ldap-Mbale-high
+#        }
+
+        suffix
+        expiration
+        logintime
+        pap
+#        if (User-Password) {
+#        if ("%{Realm}" == "matabacus.ac.ug") {
+#            update control {
+#                Auth-Type := ldap-Mat-Abacus
+#            }
+#        }
+#        elsif ("%{Realm}" == "mbalehigh.sc.ug") {
+#            update control {
+#                Auth-Type := ldap-Mbale-high
+#            }
+#        }
+#}
+
+        Autz-Type New-TLS-Connection {
+            ok
+        }
+    }
+
+    authenticate {
+        Auth-Type PAP {
+#                ldap-Mat-Abacus
+#                ldap-Mbale-high
+        }
+        Auth-Type CHAP {
+            chap
+        }
+        Auth-Type MS-CHAP {
+            mschap
+        }
+        mschap
+        digest
+        eap
+#        ldap-Mat-Abacus
+#        ldap-Mbale-high
+    }
+
+    preacct {
+        preprocess
+        acct_unique
+        suffix
+        files
+    }
+
+    accounting {
+        detail
+        exec
+        attr_filter.accounting_response
+        -sql
+    }
+
+    session {
+    }
+
+    post-auth {
+        if (session-state:User-Name && reply:User-Name && request:User-Name && (reply:User-Name == request:User-Name)) {
+            update reply {
+                &User-Name !* ANY
+            }
+        }
+        update {
+            &reply: += &session-state:
+        }
+        remove_reply_message_if_eap
+        -sql
+        exec
+        if (EAP-Key-Name && &reply:EAP-Session-Id) {
+            update reply {
+                &EAP-Key-Name := &reply:EAP-Session-Id
+            }
+        }
+    }
+}
+

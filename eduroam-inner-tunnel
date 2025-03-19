@@ -1,0 +1,87 @@
+server eduroam-inner-tunnel {
+    listen {
+       ipaddr = 127.0.0.1
+       port = 18120
+       type = auth
+    }
+
+    authorize {
+        update request {
+                Operator-Name := "1mgd-idp.renu.ac.ug"
+        }
+        filter_username
+        chap
+        mschap
+        suffix
+        update control {
+                &Proxy-To-Realm := LOCAL
+        }
+        eap {
+                ok = return
+        }
+        files
+        -sql
+        -ldap
+#        if( &Realm =="matabacus.ac.ug" ){
+#                ldap-Mat-Abacus
+#        }
+#        elsif( &Realm =="mbalehigh.sc.ug" ){
+#                ldap-Mbale-high
+#        }
+        expiration
+        logintime
+        pap
+#        if (User-Password) {
+#        if ("%{Realm}" == "matabacus.ac.ug") {
+#            update control {
+#                Auth-Type := ldap-Mat-Abacus
+#            }
+#        }
+#        elsif ("%{Realm}" == "mbalehigh.sc.ug") {
+#            update control {
+#                Auth-Type := ldap-Mbale-high
+#            }
+#        }
+#}
+
+    }
+
+    authenticate {
+        Auth-Type PAP {
+#                ldap-Mat-Abacus
+#                ldap-Mbale-high
+        }
+        Auth-Type CHAP {
+                chap
+        }
+        Auth-Type MS-CHAP {
+                mschap
+        }
+        mschap
+        eap
+	digest
+#        ldap-Mat-Abacus
+#        ldap-Mbale-high
+    }
+
+    session { }
+
+    post-auth {
+        -sql
+        Post-Auth-Type REJECT {
+                -sql
+                attr_filter.access_reject
+                update outer.session-state {
+                        &Module-Failure-Message := &request:Module-Failure-Message
+                }
+        }
+        eap
+    }
+
+    pre-proxy { }
+
+    post-proxy {
+        eap
+    }
+}
+

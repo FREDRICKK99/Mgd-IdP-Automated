@@ -1,0 +1,293 @@
+---
+- name: Update FreeRADIUS Configurations
+  hosts: all
+  gather_facts: no
+  vars:
+    csv_file_path: "/home/Mgd-IdP/schools.csv"
+    batch_dir: "/home/Mgd-IdP/generated/{{ batch_name }}"
+    proxy_conf: "{{ batch_dir }}/proxy.conf"
+    ldap_conf: "{{ batch_dir }}/ldap"
+    eduroam_conf: "{{ batch_dir }}/eduroam"
+    inner_tunnel_conf: "{{ batch_dir }}/eduroam-inner-tunnel"
+
+  tasks:
+    - name: Read CSV File
+      community.general.read_csv:
+        path: "{{ csv_file_path }}"
+        delimiter: ","
+      register: schools
+
+    - name: Debug CSV Data (Check Columns)
+      debug:
+        msg: "Loaded CSV columns: {{ schools.list | map(attribute='School') | list }}"
+      when: schools.list | length > 0
+
+    - name: Ensure batch directory exists
+      file:
+        path: "{{ batch_dir }}"
+        state: directory
+        mode: "0755"
+
+    # ✅ Process All Institutions Before Proceeding to Docker Build
+    - name: Ensure proxy.conf is correctly formatted for all institutions
+      blockinfile:
+        path: "{{ proxy_conf }}"
+        insertafter: EOF
+        marker: "# {mark} Managed by Ansible for {{ item.School }}"
+        block: |
+          realm {{ item.Domain }} {
+          }
+
+          realm "{{ item.Split }}" {
+              nostrip
+          }
+      loop: "{{ schools.list }}"
+      when: item.School is defined and item.Domain is defined and item.LDAP_Name is defined
+
+    - name: Update LDAP Config for all institutions
+      blockinfile:
+        path: "{{ ldap_conf }}"
+        insertafter: EOF
+        marker: "# {mark} Managed by Ansible for {{ item.School }}"
+        block: |
+          # {{ item.School }} LDAP Configuration
+          ldap {{ item.LDAP_Name }} {
+              server = 'ldap://mgd-idp.renu.ac.ug:389'
+              identity = 'uid=zimbra,cn=admins,cn=zimbra'
+              password = GbSDOUJpa
+              base_dn = '{{ item.Base_DN }}'
+
+              sasl {}
+
+              update {
+                  control:Password-With-Header    += 'userPassword'
+                  control:                        += 'radiusControlAttribute'
+                  request:                        += 'radiusRequestAttribute'
+                  reply:                          += 'radiusReplyAttribute'
+              }
+
+              user {
+                  base_dn = "{% raw %}${..base_dn}{% endraw %}"
+                  filter = "{% raw %}(uid=%{%{Stripped-User-Name}:-%{User-Name}}){% endraw %}"
+                  sasl {}
+              }
+
+              group {
+                  base_dn = "{% raw %}${..base_dn}{% endraw %}"
+                  filter = '(objectClass=posixGroup)'
+                  membership_attribute = 'memberOf'
+              }
+
+              profile {}
+
+              client {
+                  base_dn = "{% raw %}${..base_dn}{% endraw %}"
+                  filter = '(objectClass=radiusClient)'
+                  template {}
+                  attribute {
+                      ipaddr  = 'radiusClientIdentifier'
+                      secret  = 'radiusClientSecret'
+                  }
+              }
+
+              accounting {
+                  reference = "{% raw %}%{tolower:type.%{Acct-Status-Type}}{% endraw %}"
+                  type {
+                      start { update { description := "{% raw %}Online at %S{% endraw %}" } }
+                      interim-update { update { description := "{% raw %}Last seen at %S{% endraw %}" } }
+                      stop { update { description := "{% raw %}Offline at %S{% endraw %}" } }
+                  }
+              }
+
+              post-auth { update { description := "{% raw %}Authenticated at %S{% endraw %}" } }
+
+              options {
+                  chase_referrals = yes
+                  rebind = yes
+                  res_timeout = 10
+                  srv_timelimit = 3
+                  net_timeout = 1
+                  idle = 60
+                  probes = 3
+                  interval = 3
+                  ldap_debug = 0x0028
+              }
+
+              tls {}
+
+              pool {
+                  start = {% raw %}${thread[pool].start_servers}{% endraw %} 
+                  min = {% raw %}${thread[pool].min_spare_servers}{% endraw %} 
+                  max = {% raw %}${thread[pool].max_servers}{% endraw %} 
+                  spare = {% raw %}${thread[pool].max_spare_servers}{% endraw %} 
+                  uses = 0
+                  retry_delay = 30
+                  lifetime = 0
+                  idle_timeout = 60
+              }
+
+          }
+      loop: "{{ schools.list }}"
+      when: item.School is defined and item.Domain is defined and item.LDAP_Name is defined
+
+
+- name: Update FreeRADIUS Configurations (Eduroam & Inner-Tunnel)
+  hosts: all
+  gather_facts: no
+  vars:
+    csv_file_path: "/home/Mgd-IdP/schools.csv"
+    batch_dir: "/home/Mgd-IdP/generated/{{ batch_name }}"
+    eduroam_conf: "{{ batch_dir }}/eduroam"
+    inner_tunnel_conf: "{{ batch_dir }}/eduroam-inner-tunnel"
+
+  tasks:
+    - name: Read CSV File
+      community.general.read_csv:
+        path: "{{ csv_file_path }}"
+        delimiter: ","
+      register: schools
+
+    - name: Debug CSV Data (Check Columns)
+      debug:
+        msg: "Loaded CSV columns: {{ schools.list | map(attribute='School') | list }}"
+      when: schools.list | length > 0
+
+    - name: Generate Authorization Block (Immediately under -ldap)
+      blockinfile:
+        path: "{{ eduroam_conf }}"
+        marker: "# {mark} Managed by Ansible - Authorization Block"
+        insertafter: '-ldap'
+        block: |
+          {% for school in schools.list %}
+          {% if loop.first %}
+          if( &Realm =="{{ school.Domain }}" ){
+              {{ school.LDAP_Name }}
+          }
+          {% else %}
+          elsif( &Realm =="{{ school.Domain }}" ){
+              {{ school.LDAP_Name }}
+          }
+          {% endif %}
+          {% endfor %}
+      when: schools.list | length > 0
+
+    - name: Generate Authorization Block (pap section)
+      blockinfile:
+        path: "{{ eduroam_conf }}"
+        marker: "# {mark} Managed by Ansible - PAP Authorization Block"
+        insertafter: 'pap'
+        block: |
+          if (User-Password) {
+          {% for school in schools.list %}
+          {% if loop.first %}
+            if ("%{Realm}" == "{{ school.Domain }}") {
+                update control {
+                    Auth-Type := {{ school.LDAP_Name }}
+                }
+            }
+          {% else %}
+            elsif ("%{Realm}" == "{{ school.Domain }}") {
+                update control {
+                    Auth-Type := {{ school.LDAP_Name }}
+                }
+            }
+          {% endif %}
+          {% endfor %}
+          }
+      when: schools.list | length > 0
+
+    - name: Update Authentication Block (Auth-Type PAP)
+      blockinfile:
+        path: "{{ eduroam_conf }}"
+        marker: "# {mark} Managed by Ansible - Auth-Type PAP"
+        insertafter: 'Auth-Type PAP {'
+        block: |
+          {% for school in schools.list %}
+              {{ school.LDAP_Name }}
+          {% endfor %}
+      when: schools.list | length > 0
+
+    - name: Update Authentication Block (After eap)
+      blockinfile:
+        path: "{{ eduroam_conf }}"
+        marker: "# {mark} Managed by Ansible - After EAP"
+        insertafter: 'digest'
+        block: |
+          {% for school in schools.list %}
+              {{ school.LDAP_Name }}
+          {% endfor %}
+      when: schools.list | length > 0
+
+    # === Apply same changes to inner-tunnel ===
+    - name: Generate Authorization Block (Immediately under -ldap) for inner-tunnel
+      blockinfile:
+        path: "{{ inner_tunnel_conf }}"
+        marker: "# {mark} Managed by Ansible - Authorization Block"
+        insertafter: '-ldap'
+        block: |
+          {% for school in schools.list %}
+          {% if loop.first %}
+          if( &Realm =="{{ school.Domain }}" ){
+              {{ school.LDAP_Name }}
+          }
+          {% else %}
+          elsif( &Realm =="{{ school.Domain }}" ){
+              {{ school.LDAP_Name }}
+          }
+          {% endif %}
+          {% endfor %}
+      when: schools.list | length > 0
+
+    - name: Generate Authorization Block (pap section) for inner-tunnel
+      blockinfile:
+        path: "{{ inner_tunnel_conf }}"
+        marker: "# {mark} Managed by Ansible - PAP Authorization Block"
+        insertafter: 'pap'
+        block: |
+          if (User-Password) {
+          {% for school in schools.list %}
+          {% if loop.first %}
+            if ("%{Realm}" == "{{ school.Domain }}") {
+                update control {
+                    Auth-Type := {{ school.LDAP_Name }}
+                }
+            }
+          {% else %}
+            elsif ("%{Realm}" == "{{ school.Domain }}") {
+                update control {
+                    Auth-Type := {{ school.LDAP_Name }}
+                }
+            }
+          {% endif %}
+          {% endfor %}
+          }
+      when: schools.list | length > 0
+
+    - name: Update Authentication Block (Auth-Type PAP) for inner-tunnel
+      blockinfile:
+        path: "{{ inner_tunnel_conf }}"
+        marker: "# {mark} Managed by Ansible - Auth-Type PAP"
+        insertafter: 'Auth-Type PAP {'
+        block: |
+          {% for school in schools.list %}
+              {{ school.LDAP_Name }}
+          {% endfor %}
+      when: schools.list | length > 0
+
+    - name: Update Authentication Block (After eap) for inner-tunnel
+      blockinfile:
+        path: "{{ inner_tunnel_conf }}"
+        marker: "# {mark} Managed by Ansible - After EAP"
+        insertafter: 'digest'
+        block: |
+          {% for school in schools.list %}
+              {{ school.LDAP_Name }}
+          {% endfor %}
+      when: schools.list | length > 0
+
+  handlers:
+    - name: Restart FreeRADIUS
+      service:
+        name: freeradius
+        state: restarted
+
