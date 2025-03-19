@@ -15,7 +15,7 @@ It processes **institution data from CSV files**, dynamically updates FreeRADIUS
 
 ## **📂 Project Structure**
 ```bash
-/home/Test/
+/home/Mgd-IdP/
 │── deploy.sh                  # Main deployment script  
 │── mgd-idp-automation.yml      # Ansible playbook for FreeRADIUS configuration  
 │── schools.csv                 # Institutions list (split into batches)  
@@ -26,12 +26,12 @@ It processes **institution data from CSV files**, dynamically updates FreeRADIUS
 │   │   ├── ldap  
 │   │   ├── eduroam  
 │   │   ├── eduroam-inner-tunnel  
-│── RENU-Mgd-IdP-dockerized/     # Docker build files  
-│   ├── Dockerfile  
-│   ├── ca.cnf  
-│   ├── client.cnf  
-│   ├── server.cnf  
-│   ├── eap  
-│   ├── clients.conf  
+│ # Docker build files  
+│── Dockerfile  
+│── ca.cnf  
+│── client.cnf  
+│── server.cnf  
+│── eap  
+│── clients.conf  
 │── inventory.ini                # Ansible inventory file  
 
