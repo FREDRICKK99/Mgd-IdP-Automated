@@ -16,7 +16,7 @@ RUN install -d -o root -g root -m 0755 /etc/apt/keyrings && \
 
 # Install FreeRADIUS and required packages non-interactively
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    apt-get install -y freeradius freeradius-ldap --no-install-recommends
+    apt-get install -y freeradius freeradius-ldap freeradius-utils vim --no-install-recommends
 
 # Copy configuration files
 COPY ca.cnf /etc/freeradius/certs/ca.cnf

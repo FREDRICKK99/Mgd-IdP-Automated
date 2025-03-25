@@ -52,9 +52,9 @@
         block: |
           # {{ item.School }} LDAP Configuration
           ldap {{ item.LDAP_Name }} {
-              server = 'ldap://mgd-idp.renu.ac.ug:389'
+              server = '{{ item.Ldap_Server }}'
               identity = 'uid=zimbra,cn=admins,cn=zimbra'
-              password = GbSDOUJpa
+              password = '{{ item.Password }}'
               base_dn = '{{ item.Base_DN }}'
 
               sasl {}

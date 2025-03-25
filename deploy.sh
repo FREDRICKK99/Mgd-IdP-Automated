@@ -10,8 +10,8 @@ SPLIT_DIR="/home/Mgd-IdP/split_csv"
 SOURCE_DIR="/home/Mgd-IdP"  # Directory containing required files
 
 # Start port mappings (increments for each container)
-START_PORT1=2020
-START_PORT2=2030
+START_PORT1=1000
+START_PORT2=2000
 CONTAINER_COUNT=1  # Start numbering containers from 1
 
 # Ensure required directories exist
