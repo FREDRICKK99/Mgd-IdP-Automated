@@ -1,4 +1,3 @@
-t@mgd-idp-central:/etc/freeradius/certs# cat client.cnf
 [ ca ]
 default_ca              = CA_default
 
@@ -42,8 +41,8 @@ emailAddress            = optional
 prompt                  = no
 distinguished_name      = client
 default_bits            = 2048
-input_password          = whatever
-output_password         = whatever
+input_password          = Idpt3st2
+output_password         = Idpt3st2
 
 [client]
 countryName             = UG

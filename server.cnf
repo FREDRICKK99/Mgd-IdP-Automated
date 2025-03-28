@@ -42,8 +42,8 @@ emailAddress            = optional
 prompt                  = no
 distinguished_name      = server
 default_bits            = 2048
-input_password          = whatever
-output_password         = whatever
+input_password          = Idpt3st2
+output_password         = Idpt3st2
 #req_extensions         = v3_req
 
 [server]
@@ -52,7 +52,7 @@ stateOrProvinceName     = Kampala
 localityName            = Kololo, Mabua Road
 organizationName        = Research and Education Network for Uganda (RENU)
 emailAddress            = systems@renu.ac.ug
-commonName              = "mgd-idp-radius2.renu.ac.ug"
+commonName              = "mgd-idp-radius.renu.ac.ug"
 
 [ v3_req ]
 basicConstraints = CA:FALSE
@@ -66,7 +66,7 @@ authorityKeyIdentifier = keyid:always,issuer:always
 #  the user machine has network access.  So the host name
 #  here doesn't really have to match anything in DNS.
 [alt_names]
-DNS.1 = mgd-idp-radius2.renu.ac.ug
+DNS.1 = mgd-idp-radius.renu.ac.ug
 
 # NAIRealm from RFC 7585
 otherName.0 = 1.3.6.1.5.5.7.8.8;FORMAT:UTF8,UTF8:*.example.com

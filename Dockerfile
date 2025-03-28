@@ -23,6 +23,10 @@ COPY ca.cnf /etc/freeradius/certs/ca.cnf
 COPY client.cnf /etc/freeradius/certs/client.cnf
 COPY server.cnf /etc/freeradius/certs/server.cnf
 
+RUN cd /etc/freeradius/certs && rm *.p12 *.pem *.der *.csr *.crl *.key  index.txt* serial*  *.crt
+
+RUN chown -R freerad:freerad /etc/freeradius
+
 # Set up FreeRADIUS certificates
 RUN cd /etc/freeradius/certs && runuser -u freerad -- make
 
@@ -66,10 +70,10 @@ EXPOSE 1813/udp
 # Choose ONE of the following CMD instructions:
 
 # 1. Start FreeRADIUS normally (production mode):
-# CMD ["/usr/sbin/freeradius"]
+ CMD ["/usr/sbin/freeradius"]
 
 # 2. Start FreeRADIUS in debug mode (for troubleshooting):
-CMD ["/usr/sbin/freeradius", "-X"]
+#CMD ["/usr/sbin/freeradius", "-X"]
 
 # 3. Start FreeRADIUS as a service (if absolutely necessary):
 # CMD ["/usr/sbin/freeradius"] # Use this if you have a specific reason to run it as a service
