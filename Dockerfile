@@ -18,7 +18,7 @@ RUN install -d -o root -g root -m 0755 /etc/apt/keyrings && \
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y freeradius freeradius-ldap freeradius-utils vim --no-install-recommends
 
-RUN cd /etc/freeradius/certs && rm *.p12 *.pem *.der *.csr *.crl *.key  index.txt* serial* *.crt 
+#RUN cd /etc/freeradius/certs && rm *.p12 *.cnf *.pem *.der *.csr *.crl *.key  index.txt* serial* *.crt 
 
 # Copy configuration files
 COPY ca.cnf /etc/freeradius/certs/ca.cnf
