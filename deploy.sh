@@ -73,9 +73,7 @@ for file in "$SPLIT_DIR"/schools_*.csv; do
 
     # ✅ Copy static Docker configuration files
     cp "$DOCKER_BASE_DIR/Dockerfile" "$DOCKER_DIR/"
-    cp "$DOCKER_BASE_DIR/ca.cnf" "$DOCKER_DIR/"
-    cp "$DOCKER_BASE_DIR/client.cnf" "$DOCKER_DIR/"
-    cp "$DOCKER_BASE_DIR/server.cnf" "$DOCKER_DIR/"
+    cp -r "$DOCKER_BASE_DIR/certs" "$DOCKER_DIR/"
     cp "$DOCKER_BASE_DIR/eap" "$DOCKER_DIR/"
     cp "$DOCKER_BASE_DIR/clients.conf" "$DOCKER_DIR/"
 

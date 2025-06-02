@@ -20,16 +20,17 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 #RUN cd /etc/freeradius/certs && rm *.p12 *.cnf *.pem *.der *.csr *.crl *.key  index.txt* serial* *.crt 
 
-# Copy configuration files
-COPY ca.cnf /etc/freeradius/certs/ca.cnf
-COPY client.cnf /etc/freeradius/certs/client.cnf
-COPY server.cnf /etc/freeradius/certs/server.cnf
+# Remove existing certs directory
+RUN rm -rf /etc/freeradius/certs && mkdir -p /etc/freeradius/certs
+
+# Copy local certs folder into the clean destination
+COPY certs/ /etc/freeradius/certs/
 
 
 RUN chown -R freerad:freerad /etc/freeradius
 
 # Set up FreeRADIUS certificates
-RUN cd /etc/freeradius/certs && runuser -u freerad make
+#RUN cd /etc/freeradius/certs && runuser -u freerad make
 
 COPY clients.conf /etc/freeradius/clients.conf
 COPY proxy.conf /etc/freeradius/proxy.conf
