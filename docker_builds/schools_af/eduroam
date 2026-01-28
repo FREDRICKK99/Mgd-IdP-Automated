@@ -1,0 +1,349 @@
+server eduroam {
+
+    listen {
+        type = auth
+        ipaddr = *
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipaddr = *
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    listen {
+        type = auth
+        ipv6addr = ::
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipv6addr = ::
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    authorize {
+
+         update request {
+               Operator-Name := "1mgd-idp.renu.ac.ug"
+        }
+
+        filter_username
+        preprocess
+        chap
+        mschap
+        digest
+        eap {
+            ok = return
+        }
+        files
+        -sql
+        -ldap
+# BEGIN Managed by Ansible - Authorization Block
+if( &Realm =="students.stkizitossbugolobi.sc.ug" ){
+    ldap-stkizito-ss-bugolobi-students
+}
+elsif( &Realm =="luweeross.sc.ug" ){
+    ldap-luwero-ss
+}
+elsif( &Realm =="students.luweeross.sc.ug" ){
+    ldap-luwero-ss-students
+}
+elsif( &Realm =="masherukagirls.sc.ug" ){
+    ldap-masherukagirls-ss
+}
+elsif( &Realm =="students.masherukagirls.sc.ug" ){
+    ldap-masherukagirls-ss-students
+}
+elsif( &Realm =="bishopcombonicollege.sc.ug" ){
+    ldap-bishop-comboni-college
+}
+elsif( &Realm =="students.bishopcombonicollege.sc.ug" ){
+    ldap-bishop-comboni-college-students
+}
+elsif( &Realm =="mutolere.sc.ug" ){
+    ldap-mutolere-ss
+}
+elsif( &Realm =="students.mutolere.sc.ug" ){
+    ldap-mutolere-ss-students
+}
+elsif( &Realm =="stagnesgirls.sc.ug" ){
+    ldap-stagnesgirls
+}
+elsif( &Realm =="students.stagnesgirls.sc.ug" ){
+    ldap-stagnesgirls-students
+}
+elsif( &Realm =="ejiome.sc.ug" ){
+    ldap-ejiome
+}
+elsif( &Realm =="students.ejiome.sc.ug" ){
+    ldap-ejiome-students
+}
+elsif( &Realm =="windle.org" ){
+    ldap-windle
+}
+elsif( &Realm =="students.windle.org" ){
+    ldap-windle-students
+}
+elsif( &Realm =="standrewkaggwass.sc.ug" ){
+    ldap-standrewkaggwass
+}
+elsif( &Realm =="students.standrewkaggwass.sc.ug" ){
+    ldap-standrewkaggwass-students
+}
+elsif( &Realm =="naro.go.ug" ){
+    ldap-naro
+}
+elsif( &Realm =="icrw.org" ){
+    ldap-icrw
+}
+elsif( &Realm =="uhpab.go.ug" ){
+    ldap-uhpab
+}
+# END Managed by Ansible - Authorization Block
+#        if( &Realm =="matabacus.ac.ug" ){
+#                ldap-Mat-Abacus
+#        }
+#        elsif( &Realm =="mbalehigh.sc.ug" ){
+#                ldap-Mbale-high
+#        }
+
+        suffix
+        expiration
+        logintime
+        pap
+# BEGIN Managed by Ansible - PAP Authorization Block
+if (User-Password) {
+  if ("%{Realm}" == "students.stkizitossbugolobi.sc.ug") {
+      update control {
+          Auth-Type := ldap-stkizito-ss-bugolobi-students
+      }
+  }
+  elsif ("%{Realm}" == "luweeross.sc.ug") {
+      update control {
+          Auth-Type := ldap-luwero-ss
+      }
+  }
+  elsif ("%{Realm}" == "students.luweeross.sc.ug") {
+      update control {
+          Auth-Type := ldap-luwero-ss-students
+      }
+  }
+  elsif ("%{Realm}" == "masherukagirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-masherukagirls-ss
+      }
+  }
+  elsif ("%{Realm}" == "students.masherukagirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-masherukagirls-ss-students
+      }
+  }
+  elsif ("%{Realm}" == "bishopcombonicollege.sc.ug") {
+      update control {
+          Auth-Type := ldap-bishop-comboni-college
+      }
+  }
+  elsif ("%{Realm}" == "students.bishopcombonicollege.sc.ug") {
+      update control {
+          Auth-Type := ldap-bishop-comboni-college-students
+      }
+  }
+  elsif ("%{Realm}" == "mutolere.sc.ug") {
+      update control {
+          Auth-Type := ldap-mutolere-ss
+      }
+  }
+  elsif ("%{Realm}" == "students.mutolere.sc.ug") {
+      update control {
+          Auth-Type := ldap-mutolere-ss-students
+      }
+  }
+  elsif ("%{Realm}" == "stagnesgirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-stagnesgirls
+      }
+  }
+  elsif ("%{Realm}" == "students.stagnesgirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-stagnesgirls-students
+      }
+  }
+  elsif ("%{Realm}" == "ejiome.sc.ug") {
+      update control {
+          Auth-Type := ldap-ejiome
+      }
+  }
+  elsif ("%{Realm}" == "students.ejiome.sc.ug") {
+      update control {
+          Auth-Type := ldap-ejiome-students
+      }
+  }
+  elsif ("%{Realm}" == "windle.org") {
+      update control {
+          Auth-Type := ldap-windle
+      }
+  }
+  elsif ("%{Realm}" == "students.windle.org") {
+      update control {
+          Auth-Type := ldap-windle-students
+      }
+  }
+  elsif ("%{Realm}" == "standrewkaggwass.sc.ug") {
+      update control {
+          Auth-Type := ldap-standrewkaggwass
+      }
+  }
+  elsif ("%{Realm}" == "students.standrewkaggwass.sc.ug") {
+      update control {
+          Auth-Type := ldap-standrewkaggwass-students
+      }
+  }
+  elsif ("%{Realm}" == "naro.go.ug") {
+      update control {
+          Auth-Type := ldap-naro
+      }
+  }
+  elsif ("%{Realm}" == "icrw.org") {
+      update control {
+          Auth-Type := ldap-icrw
+      }
+  }
+  elsif ("%{Realm}" == "uhpab.go.ug") {
+      update control {
+          Auth-Type := ldap-uhpab
+      }
+  }
+}
+# END Managed by Ansible - PAP Authorization Block
+#        if (User-Password) {
+#        if ("%{Realm}" == "matabacus.ac.ug") {
+#            update control {
+#                Auth-Type := ldap-Mat-Abacus
+#            }
+#        }
+#        elsif ("%{Realm}" == "mbalehigh.sc.ug") {
+#            update control {
+#                Auth-Type := ldap-Mbale-high
+#            }
+#        }
+#}
+
+        Autz-Type New-TLS-Connection {
+            ok
+        }
+    }
+
+    authenticate {
+        Auth-Type PAP {
+# BEGIN Managed by Ansible - Auth-Type PAP
+    ldap-stkizito-ss-bugolobi-students
+    ldap-luwero-ss
+    ldap-luwero-ss-students
+    ldap-masherukagirls-ss
+    ldap-masherukagirls-ss-students
+    ldap-bishop-comboni-college
+    ldap-bishop-comboni-college-students
+    ldap-mutolere-ss
+    ldap-mutolere-ss-students
+    ldap-stagnesgirls
+    ldap-stagnesgirls-students
+    ldap-ejiome
+    ldap-ejiome-students
+    ldap-windle
+    ldap-windle-students
+    ldap-standrewkaggwass
+    ldap-standrewkaggwass-students
+    ldap-naro
+    ldap-icrw
+    ldap-uhpab
+# END Managed by Ansible - Auth-Type PAP
+#                ldap-Mat-Abacus
+#                ldap-Mbale-high
+        }
+        Auth-Type CHAP {
+            chap
+        }
+        Auth-Type MS-CHAP {
+            mschap
+        }
+        mschap
+        digest
+# BEGIN Managed by Ansible - After EAP
+    ldap-stkizito-ss-bugolobi-students
+    ldap-luwero-ss
+    ldap-luwero-ss-students
+    ldap-masherukagirls-ss
+    ldap-masherukagirls-ss-students
+    ldap-bishop-comboni-college
+    ldap-bishop-comboni-college-students
+    ldap-mutolere-ss
+    ldap-mutolere-ss-students
+    ldap-stagnesgirls
+    ldap-stagnesgirls-students
+    ldap-ejiome
+    ldap-ejiome-students
+    ldap-windle
+    ldap-windle-students
+    ldap-standrewkaggwass
+    ldap-standrewkaggwass-students
+    ldap-naro
+    ldap-icrw
+    ldap-uhpab
+# END Managed by Ansible - After EAP
+        eap
+#        ldap-Mat-Abacus
+#        ldap-Mbale-high
+    }
+
+    preacct {
+        preprocess
+        acct_unique
+        suffix
+        files
+    }
+
+    accounting {
+        detail
+        exec
+        attr_filter.accounting_response
+        -sql
+    }
+
+    session {
+    }
+
+    post-auth {
+        if (session-state:User-Name && reply:User-Name && request:User-Name && (reply:User-Name == request:User-Name)) {
+            update reply {
+                &User-Name !* ANY
+            }
+        }
+        update {
+            &reply: += &session-state:
+        }
+        remove_reply_message_if_eap
+        -sql
+        exec
+        if (EAP-Key-Name && &reply:EAP-Session-Id) {
+            update reply {
+                &EAP-Key-Name := &reply:EAP-Session-Id
+            }
+        }
+    }
+}
+

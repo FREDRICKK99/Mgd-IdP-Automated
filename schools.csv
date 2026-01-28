@@ -131,44 +131,44 @@ St John's Comprehensive secondary school,stjohnslyantonde.sc.ug,~.+\\.stjohnslya
 St Mackay memorial college Nateete,mackaymemorial.sc.ug,~.+\\.mackaymemorial\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mackaymemorial,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mackaymemorial
 St Naalya ss lugazi,naalya-schools.com,~.+\\.naalya-schools\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=naalya-schools,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-naalya-schools
 St charleslwanga Bukerere,stcharlesbukerere.sc.ug,~.+\\.stcharlesbukerere\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stcharlesbukerere,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stcharlesbukerere
-Mbale ss ,mbaless.sc.ug,~.+\\.mbaless\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mbaless,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mbaless
-Mariam High School ,mariamhigh.com,~.+\\.mariamhigh\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mariamhigh,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mariamhigh
-RuhindaSS ,ruhindass.sc.ug,~.+\\.ruhindass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ruhindass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ruhindass
-Victoria High School Iganga ,victoriahigh.sc.ug,~.+\\.victoriahigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=victoriahigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-victoriahigh
+Mbale ss,mbaless.sc.ug,~.+\\.mbaless\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mbaless,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mbaless
+Mariam High School,mariamhigh.com,~.+\\.mariamhigh\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mariamhigh,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mariamhigh
+RuhindaSS,ruhindass.sc.ug,~.+\\.ruhindass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ruhindass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ruhindass
+Victoria High School Iganga,victoriahigh.sc.ug,~.+\\.victoriahigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=victoriahigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-victoriahigh
 Kitabi seminary Bushenyi,kitabiseminary.sc.ug,~.+\\.kitabiseminary\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kitabiseminary,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kitabiseminary
-Nabumali High school ,nabumalihs.sc.ug,~.+\\.nabumalihs\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nabumalihs,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nabumalihigh
-St Josephs College Ombaci ,ombaci.ac.ug,~.+\\.ombaci\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ombaci,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-josephcollombaci
-WellStar Bright SS Mukono  ,wellstar.sc.ug,~.+\\.wellstar\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=wellstar,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-wellstarbright
-Our Lady of Africa Namilyango ,ourladyofafricaschools.sc.ug,~.+\\.ourladyofafricaschools\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ourladyofafricaschools,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ourladyafrica
+Nabumali High school,nabumalihs.sc.ug,~.+\\.nabumalihs\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nabumalihs,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nabumalihigh
+St Josephs College Ombaci,ombaci.ac.ug,~.+\\.ombaci\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ombaci,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-josephcollombaci
+WellStar Bright SS Mukono,wellstar.sc.ug,~.+\\.wellstar\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=wellstar,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-wellstarbright
+Our Lady of Africa Namilyango,ourladyofafricaschools.sc.ug,~.+\\.ourladyofafricaschools\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ourladyofafricaschools,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ourladyafrica
 Kuluva School of Nursing and Midwifery,kuluvaschoolofnursing.ac.ug,~.+\\.kuluvaschoolofnursing\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kuluvaschoolofnursing,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kuluva
-Kiira MOtors Corporation ,kiiramotors.com,~.+\\.kiiramotors\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kiiramotors,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kmc
-Wampeewo Ntake ,wampeewontakkeschool.com,~.+\\.wampeewontakkeschool\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=wampeewontakkeschool,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-wampeewo
-Uganda Martyrs Seminary Namugongo ,ums.ac.ug,~.+\\.ums\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ums,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ums
+Kiira MOtors Corporation,kiiramotors.com,~.+\\.kiiramotors\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kiiramotors,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kmc
+Wampeewo Ntake,wampeewontakkeschool.com,~.+\\.wampeewontakkeschool\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=wampeewontakkeschool,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-wampeewo
+Uganda Martyrs Seminary Namugongo,ums.ac.ug,~.+\\.ums\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ums,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ums
 Research and Education Agency,rae.co.ug,~.+\\.rae\\.co\\.ug$,~.+\\.rae\\.co\\.ug$,"ou=people,dc=rae,dc=co,dc=ug",_RRSpRlZu,ldap://rmail.renu.ac.ug:389,ldap-rae
-eVA  ,eva.renu.ac.ug,~.+\\.eva\\.renu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=eva,dc=renu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-eVA
-Uganda Cancer Institue ,uci.or.ug,~.+\\.uci\\.or\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=uci,dc=or,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-UCI
-Candle Light Hight School ,candlelighthigh.sc.ug,~.+\\.candlelighthigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=candlelighthigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-candlelight
+eVA,eva.renu.ac.ug,~.+\\.eva\\.renu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=eva,dc=renu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-eVA
+Uganda Cancer Institue,uci.or.ug,~.+\\.uci\\.or\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=uci,dc=or,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-UCI
+Candle Light Hight School,candlelighthigh.sc.ug,~.+\\.candlelighthigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=candlelighthigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-candlelight
 Moyo Star High School,moyostarhigh.sc.ug,~.+\\.moyostarhigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=moyostarhigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-moyostarhigh
 nicabilonino,nicabilonino.ac.ug,~.+\\.nicabilonino\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nicabilonino,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nicabilonino
 miu added to Mgd-IdP2  on 20/11/2023,miu.ac.ug,~.+\\.miu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=miu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-miu
-Nexus International University ,niu.ac.ug,~.+\\.niu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=niu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nexus
-African Rural University ,aru.ac.ug,~.+\\.aru\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=aru,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-aru
+Nexus International University,niu.ac.ug,~.+\\.niu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=niu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nexus
+African Rural University,aru.ac.ug,~.+\\.aru\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=aru,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-aru
 Uganda Pentecostal University,upu.ac.ug,~.+\\.upu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=upu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-upu
-Baylor Uganda ,baylor-uganda.org,~.+\\.baylor-uganda\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=baylor-uganda,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-baylor
+Baylor Uganda,baylor-uganda.org,~.+\\.baylor-uganda\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=baylor-uganda,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-baylor
 Cyber School Tech added to Mgd-IdP2  on 19/1/2024,cyberschooltech.co.ug,~.+\\.cyberschooltech\\.co\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=cyberschooltech,dc=co,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-cybertech
 African Renewal University,afru.ac.ug,~.+\\.afru\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=afru,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-afru
-Team University ,teamuniversity.ac.ug,~.+\\.teamuniversity\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=teamuniversity,dc=ac,dc=ug",_RRSpRlZu,ldap://rmail.renu.ac.ug:389,ldap-teamuniversity
+Team University,teamuniversity.ac.ug,~.+\\.teamuniversity\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=teamuniversity,dc=ac,dc=ug",_RRSpRlZu,ldap://rmail.renu.ac.ug:389,ldap-teamuniversity
 Hutchinson Central Research Institute - Uganda.,fredhutch.org,~.+\\.fredhutch\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=fredhutch,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-hcri
-Muni University ,muni.ac.ug,~.+\\.muni\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=muni,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-muni
-Bombo Army Secondary School ,bomboarmyss.sc.ug,~.+\\.bomboarmyss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bomboarmyss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bomboarmy
-St Joseph Girls' School Nsambya ,joginsa.com,~.+\\.joginsa\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=joginsa,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-joginsa
+Muni University,muni.ac.ug,~.+\\.muni\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=muni,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-muni
+Bombo Army Secondary School,bomboarmyss.sc.ug,~.+\\.bomboarmyss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bomboarmyss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bomboarmy
+St Joseph Girls' School Nsambya,joginsa.com,~.+\\.joginsa\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=joginsa,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-joginsa
 Cornerstone schools (Ekitangala and Leadership academy),cornerstoneschoolsafrica.org,~.+\\.cornerstoneschoolsafrica\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=cornerstoneschoolsafrica,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-Cornerstone
 Right to play,righttoplay.com,~.+\\.righttoplay\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=righttoplay,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-Righttoplay
 Kyetume School of nursing and Midwifery,kyetumesnm.com,~.+\\.kyetumesnm\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kyetumesnm,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-Kyetumesnm
 Lokopio Hills School,lokopiohilltech.ac.ug,~.+\\.lokopiohilltech\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=lokopiohilltech,dc=ac,dc=ug",_RRSpRlZu,ldap://rmail.renu.ac.ug:389,ldap-lokopio
 Empower International Academy,africanchildrenschoir.com,~.+\\.africanchildrenschoir\\.com$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=africanchildrenschoir,dc=com",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-empower
 WALIMU ORGANIZATION,walimu.org,~.+\\.walimu\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=walimu,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-walimu
-MOTHERWELL JUNIOR SCHOOL ,motherwell.sc.ug,~.+\\.motherwell\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=motherwell,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-motherwell
+MOTHERWELL JUNIOR SCHOOL,motherwell.sc.ug,~.+\\.motherwell\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=motherwell,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-motherwell
 MESH CUSTODIANS,custodians.eduroam.ac.ug,~.+\\.custodians\\.eduroam\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=custodians,dc=eduroam,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-custodians
 Muzza High School,muzzahs.sc.ug,~.+\\.muzzahs\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=muzzahs,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-muzzahs
 RENU BOARD MEMBERS,bod.renu.ac.ug,~.+\\.bod\\.renu\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bod,dc=renu,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bod
@@ -209,7 +209,6 @@ Kameruka Seed SS,kamerukaseed.sc.ug,~.+\\.kamerukaseed\\.sc\\.ug$,"uid=zimbra,cn
 Bulucheke Secondary School,buluchekess.sc.ug,~.+\\.buluchekess\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=buluchekess,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-buluchekess
 St Mark Secondary school Naminya,stmarknaminya.sc.ug,~.+\\.stmarknaminya\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stmarknaminya,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stmarknaminya
 3RS,3rss.sc.ug,~.+\\.3rss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=3rss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-3rss
-Hassan Trabi Bweyogerere Secondary School,hassantrabiss.sc.ug,~.+\\.hassantrabiss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=hassantrabiss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-hassantrabiss
 Bukhalu Seed Secondary School,bukhaluseed.sc.ug,~.+\\.bukhaluseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bukhaluseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bukhaluseed
 Rubona SS,rubonass.sc.ug,~.+\\.rubonass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=rubonass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-rubonass
 COMBONI S.S BURUNGIRA,comboniburungira.sc.ug,~.+\\.comboniburungira\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=comboniburungira,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-comboniburungira
@@ -230,7 +229,6 @@ Francis Ayume Memorial School Koboko,francisayume.sc.ug,~.+\\.francisayume\\.sc\
 Ikwera girls SS,ikweragirls.sc.ug,~.+\\.ikweragirls\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ikweragirls,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ikweragirls
 Kiboga parents secondary school,kibogaparents.sc.ug,~.+\\.kibogaparents\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kibogaparents,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kibogaparents
 Aromo vocational secondary school,aromovoc.sc.ug,~.+\\.aromovoc\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=aromovoc,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-aromovoc
-Walibo Seed S.S,waliboseed.sc.ug,~.+\\.waliboseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=waliboseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-waliboseed
 Buwambo Seed Secondary School,buwamboseed.sc.ug,~.+\\.buwamboseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=buwamboseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-buwamboseed
 Ndejje Vocational Secondary School,ndejjevoc.sc.ug,~.+\\.ndejjevoc\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ndejjevoc,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ndejjevoc
 Lukole Seed Secondary School,lukoleseed.sc.ug,~.+\\.lukoleseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=lukoleseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-lukoleseed
@@ -256,14 +254,12 @@ KABEZI SECONDARY SCHOOL,kabezi.sc.ug,~.+\\.kabezi\\.sc\\.ug$,"uid=zimbra,cn=admi
 RWEIKINIRO SECONDARY SCHOOL,rweikiniro.sc.ug,~.+\\.rweikiniro\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=rweikiniro,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-rweikiniro
 Koro senior secondary school,koross.sc.ug,~.+\\.koross\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=koross,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-koross
 Ogor Seed SS,ogorseed.sc.ug,~.+\\.ogorseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ogorseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ogorseed
-Lagile Seed Secondary School,lagileseed.sc.ug,~.+\\.lagileseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=lagileseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-lagileseed
 Kiziba High School,kizibahigh.sc.ug,~.+\\.kizibahigh\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kizibahigh,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kizibahigh
 St Paul Kazindiro,stpaulkazindiro.sc.ug,~.+\\.stpaulkazindiro\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stpaulkazindiro,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stpaulkazindiro
 Blessed Parents Vocational SS,blessedparents.sc.ug,~.+\\.blessedparents\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=blessedparents,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-blessedparents
 Kagunga Seed SS,kagungaseed.sc.ug,~.+\\.kagungaseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kagungaseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kagungaseed
 ATIIRA SEED SECONDARY SCHOOL,atiiraseed.sc.ug,~.+\\.atiiraseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=atiiraseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-atiiraseed
 Bugambi Secondary School,bugambi.sc.ug,~.+\\.bugambi\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bugambi,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bugambi
-EJIOME SECONDARY SCHOOL,ejiome.sc.ug,~.+\\.ejiome\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ejiome,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-ejiome
 Namulonge C.O.U ss,namulongecou.sc.ug,~.+\\.namulongecou\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=namulongecou,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-namulongecou
 Kinyogoga Seed SS,kinyogogaseed.sc.ug,~.+\\.kinyogogaseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kinyogogaseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kinyogogaseed
 St Denis Kijaguzo Secondary School,stdeniskijaguzo.sc.ug,~.+\\.stdeniskijaguzo\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stdeniskijaguzo,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stdeniskijaguzo
@@ -274,13 +270,27 @@ BUTARE SS,butare.sc.ug,~.+\\.butare\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra",
 KARUNGU SEED SS,karunguseed.sc.ug,~.+\\.karunguseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=karunguseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-karunguseed
 St.Thomas Girls SS,stthomasgirls.sc.ug,~.+\\.stthomasgirls\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stthomasgirls,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stthomasgirls
 ST.JOSEPH'S KANAAWA,stjosephskanaawa.sc.ug,~.+\\.stjosephskanaawa\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stjosephskanaawa,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stjosephskanaawa
-Muramba S.S,muramba.sc.ug,~.+\\.muramba\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=muramba,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-muramba
 ST.ANDREW'S ACADEMY,standrews.sc.ug,~.+\\.standrews\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=standrews,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-standrews
 Lefori Seed SS,leforiseed.sc.ug,~.+\\.leforiseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=leforiseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-leforiseed
-PAWOR SEED SECONDARY SCHOOL,paworseed.sc.ug,~.+\\.paworseed\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=paworseed,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-paworseed
 Kworus Secondary School,kworus.sc.ug,~.+\\.kworus\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kworus,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kworus
-Chepkwasta Secondary School,chepkwasta.sc.ug,~.+\\.chepkwasta\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=chepkwasta,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-chepkwasta
 NYAMIREMBE SECONDARY SCHOOL,nyamirembe.sc.ug,~.+\\.nyamirembe\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nyamirembe,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nyamirembe
-Nalusala Seed Secondary School,nalusala.sc.ug,~.+\\.nalusala\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nalusala,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nalusala
 SANGA SS,sangass.sc.ug,~.+\\.sangass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=sangass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-sangass
 Chawente secondary school,chawente.sc.ug,~.+\\.chawente\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=chawente,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-chawente
+Dr. Florer Memorial College Kaliro,drflorermemorial.sc.ug,~.+\\.drflorermemorial\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=drflorermemorial,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-drflorermemorial
+Kagwara Seed Secondary School,kagwaraseedss.sc.ug,~.+\\.kagwaraseedss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kagwaraseedss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kagwaraseedss
+Mpumudde Secondary School,mpumuddess.sc.ug,~.+\\.mpumuddess\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mpumuddess,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mpumuddess
+Nawanyingi Seed Secondary School,nawanyingiss.sc.ug,~.+\\.nawanyingiss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nawanyingiss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nawanyingiss
+Bethany Land Institute (BLI),bethanylandinstitute.org,~.+\\.bethanylandinstitute\\.org$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bethanylandinstitute,dc=org",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bethanyinst
+Mengo Technical and Business Institute,mbti.ac.ug,~.+\\.mbti\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mbti,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mbti
+Kabaale Sanje SSS,kabaalesanjesss.sc.ug,~.+\\.kabaalesanjesss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=kabaalesanjesss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-kabaale-sanje
+St Mary's College Lacor,stmaryscollegelacor.sc.ug,~.+\\.stmaryscollegelacor\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=stmaryscollegelacor,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-stmaryslacor
+ Dakabela Comprehensive Secondary School,dakabelass.sc.ug,~.+\\.dakabelass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=dakabelass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-dakabela
+Mamita technical and business management institute,mamita.ac.ug,~.+\\.mamita\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=mamita,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-mamita
+Musiitwa Seed S.S,musiitwaseedss.sc.ug,~.+\\.musiitwaseedss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=musiitwaseedss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-musiitwaseedss
+Namuganga Secondary School,namugangass.sc.ug,~.+\\.namugangass\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=namugangass,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-namugangass
+Blessed Seed Secondary School,blessedseedss.sc.ug,~.+\\.blessedseedss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=blessedseedss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-blessedseedss
+Nakaseke Technical Institute,nakaseketi.tvet.go.ug,~.+\\.nakaseketi\\.tvet\\.go\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=nakaseketi,dc=tvet,dc=go,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-nakaseketi
+Springing Stars Nursery and Junior School,springingstars.ac.ug,~.+\\.springingstars\\.ac\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=springingstars,dc=ac,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-springingstars
+Afya Na Haki (Ahaki),ahakiinstitute.ac,~.+\\.ahakiinstitute\\.ac$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=ahakiinstitute,dc=ac",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-afyanahaki
+Seseme Girls SS ,sesemegirlsss.sc.ug,~.+\\.sesemegirlsss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=sesemegirlsss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-sesemegirls
+Bukandula Mixed Secondary School,bukandulamixedss.sc.ug,~.+\\.bukandulamixedss\\.sc\\.ug$,"uid=zimbra,cn=admins,cn=zimbra","ou=people,dc=bukandulamixedss,dc=sc,dc=ug",GbSDOUJpa,ldap://mgd-idp.renu.ac.ug:389,ldap-bukandulamixed

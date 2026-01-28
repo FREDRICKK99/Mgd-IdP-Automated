@@ -1,0 +1,82 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=UG, ST=Kampala, L=Kololo, Mabua Road, O=Research and Education Network for Uganda (RENU)/emailAddress=systems@renu.ac.ug, CN=RENU Certificate Authority
+        Validity
+            Not Before: Jun 28 15:45:38 2023 GMT
+            Not After : May  6 15:45:38 2033 GMT
+        Subject: C=UG, ST=Kampala, O=Research and Education Network for Uganda (RENU), CN=technical@renu.ac.ug/emailAddress=systems@renu.ac.ug
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ac:5b:bc:d5:b9:4f:39:ea:c0:a9:35:c8:78:b3:
+                    37:21:0c:67:b6:2e:8e:bd:f6:fc:76:9c:77:70:cf:
+                    a0:a7:28:4a:a3:57:76:74:cd:ca:c5:0d:7c:2b:db:
+                    17:df:fb:9f:c9:a7:02:6b:da:0d:3f:56:5d:68:a0:
+                    b6:1c:1e:36:6d:0c:10:11:f4:2d:0a:10:d2:b6:67:
+                    ed:62:d3:04:8f:01:45:77:3a:f2:57:69:d1:99:f9:
+                    3f:15:17:ec:9d:49:31:0e:66:34:ab:54:e7:ce:e8:
+                    c3:65:0d:e5:e3:17:90:8a:b9:bc:58:20:25:de:07:
+                    ba:97:a7:4e:16:97:92:a6:cc:ed:de:2a:82:1a:5d:
+                    1b:94:ec:59:e7:c9:5d:b0:f4:de:2e:2d:17:11:fd:
+                    ef:34:09:07:e9:2f:30:2e:7f:43:88:62:dc:7c:7e:
+                    0e:37:6b:a6:4f:9e:bf:5b:d4:4f:02:2c:7d:dc:92:
+                    c2:df:5e:4c:04:56:62:2c:eb:46:56:d4:95:51:cc:
+                    5b:bf:fa:dd:88:d9:67:6f:5a:16:5f:fe:83:17:15:
+                    10:24:4a:94:77:15:ff:c5:ce:cb:bc:48:09:3e:7f:
+                    fa:c0:f6:34:27:b9:05:63:9b:cf:04:08:8b:c0:13:
+                    8c:1e:4a:ef:38:b8:b8:fb:2b:58:49:5b:40:42:ab:
+                    65:35
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://www.example.com/example_ca.crl
+
+    Signature Algorithm: sha256WithRSAEncryption
+         a8:ef:0d:6a:5b:b4:cd:c1:ea:56:fa:51:65:5e:90:f0:e1:c6:
+         93:2e:7f:30:46:12:1a:64:8d:05:31:63:ad:80:94:23:14:12:
+         18:eb:90:d2:96:30:98:df:b1:e3:23:a4:52:ab:e7:63:ec:aa:
+         7b:ba:14:b7:7f:95:f9:9d:b0:65:a2:3e:c9:4a:6f:f3:66:d7:
+         c3:55:91:e3:6d:3f:42:15:26:06:2b:bf:16:1b:67:96:54:2f:
+         a1:fd:39:eb:f6:ce:17:8e:82:ad:20:87:4e:4b:8e:f9:bd:6c:
+         77:3b:99:e9:c4:80:e5:e7:45:1c:9d:4f:5d:8b:9a:eb:81:be:
+         1d:9b:ce:68:80:9a:b8:83:a4:fb:dc:a9:b1:21:50:22:34:73:
+         38:66:1d:de:c6:cb:cb:9d:6b:ed:09:39:ad:2f:4d:fc:dc:8d:
+         0f:b7:4e:e2:2a:0a:64:21:70:6e:a1:da:bf:d1:67:80:99:44:
+         2f:3a:5b:33:26:f8:76:c8:bd:93:df:fd:20:9d:a7:c8:27:a2:
+         cd:b5:a5:3a:0a:6c:55:5d:2d:3a:13:18:39:74:86:a5:0b:e3:
+         e8:96:56:8b:5d:5a:c3:0e:2c:0f:25:a3:b4:7d:fe:b9:e3:ac:
+         b3:df:7c:5b:3b:c0:5f:54:a9:af:e9:e1:90:8e:06:24:0b:54:
+         63:ff:1b:1a
+-----BEGIN CERTIFICATE-----
+MIIEJzCCAw+gAwIBAgIBAjANBgkqhkiG9w0BAQsFADCBvzELMAkGA1UEBhMCVUcx
+EDAOBgNVBAgMB0thbXBhbGExGzAZBgNVBAcMEktvbG9sbywgTWFidWEgUm9hZDE5
+MDcGA1UECgwwUmVzZWFyY2ggYW5kIEVkdWNhdGlvbiBOZXR3b3JrIGZvciBVZ2Fu
+ZGEgKFJFTlUpMSEwHwYJKoZIhvcNAQkBFhJzeXN0ZW1zQHJlbnUuYWMudWcxIzAh
+BgNVBAMMGlJFTlUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MB4XDTIzMDYyODE1NDUz
+OFoXDTMzMDUwNjE1NDUzOFowgZwxCzAJBgNVBAYTAlVHMRAwDgYDVQQIDAdLYW1w
+YWxhMTkwNwYDVQQKDDBSZXNlYXJjaCBhbmQgRWR1Y2F0aW9uIE5ldHdvcmsgZm9y
+IFVnYW5kYSAoUkVOVSkxHTAbBgNVBAMMFHRlY2huaWNhbEByZW51LmFjLnVnMSEw
+HwYJKoZIhvcNAQkBFhJzeXN0ZW1zQHJlbnUuYWMudWcwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCsW7zVuU856sCpNch4szchDGe2Lo699vx2nHdwz6Cn
+KEqjV3Z0zcrFDXwr2xff+5/JpwJr2g0/Vl1ooLYcHjZtDBAR9C0KENK2Z+1i0wSP
+AUV3OvJXadGZ+T8VF+ydSTEOZjSrVOfO6MNlDeXjF5CKubxYICXeB7qXp04Wl5Km
+zO3eKoIaXRuU7FnnyV2w9N4uLRcR/e80CQfpLzAuf0OIYtx8fg43a6ZPnr9b1E8C
+LH3cksLfXkwEVmIs60ZW1JVRzFu/+t2I2WdvWhZf/oMXFRAkSpR3Ff/Fzsu8SAk+
+f/rA9jQnuQVjm88ECIvAE4weSu84uLj7K1hJW0BCq2U1AgMBAAGjTzBNMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMCMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly93d3cuZXhh
+bXBsZS5jb20vZXhhbXBsZV9jYS5jcmwwDQYJKoZIhvcNAQELBQADggEBAKjvDWpb
+tM3B6lb6UWVekPDhxpMufzBGEhpkjQUxY62AlCMUEhjrkNKWMJjfseMjpFKr52Ps
+qnu6FLd/lfmdsGWiPslKb/Nm18NVkeNtP0IVJgYrvxYbZ5ZUL6H9Oev2zheOgq0g
+h05Ljvm9bHc7menEgOXnRRydT12LmuuBvh2bzmiAmriDpPvcqbEhUCI0czhmHd7G
+y8uda+0JOa0vTfzcjQ+3TuIqCmQhcG6h2r/RZ4CZRC86WzMm+HbIvZPf/SCdp8gn
+os21pToKbFVdLToTGDl0hqUL4+iWVotdWsMOLA8lo7R9/rnjrLPffFs7wF9Uqa/p
+4ZCOBiQLVGP/Gxo=
+-----END CERTIFICATE-----

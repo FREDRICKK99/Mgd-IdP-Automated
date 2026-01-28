@@ -1,0 +1,1339 @@
+server eduroam {
+
+    listen {
+        type = auth
+        ipaddr = *
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipaddr = *
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    listen {
+        type = auth
+        ipv6addr = ::
+        port = 0
+        limit {
+            max_connections = 0
+            lifetime = 0
+            idle_timeout = 0
+        }
+    }
+
+    listen {
+        ipv6addr = ::
+        port = 0
+        type = acct
+        limit { }
+    }
+
+    authorize {
+
+         update request {
+               Operator-Name := "1mgd-idp.renu.ac.ug"
+        }
+
+        filter_username
+        preprocess
+        chap
+        mschap
+        digest
+        eap {
+            ok = return
+        }
+        files
+        -sql
+        -ldap
+# BEGIN Managed by Ansible - Authorization Block
+if( &Realm =="students.atyakseedss.sc.ug" ){
+    ldap-atyakseed-students
+}
+elsif( &Realm =="bulindiss.sc.ug" ){
+    ldap-bulindiss
+}
+elsif( &Realm =="students.bulindiss.sc.ug" ){
+    ldap-bulindiss-students
+}
+elsif( &Realm =="uneb.ac.ug" ){
+    ldap-uneb
+}
+elsif( &Realm =="students.uneb.ac.ug" ){
+    ldap-uneb-students
+}
+elsif( &Realm =="uvcf.ac.ug" ){
+    ldap-uvcf
+}
+elsif( &Realm =="students.uvcf.ac.ug" ){
+    ldap-uvcf-students
+}
+elsif( &Realm =="sweswe-btvet.sc.ug" ){
+    ldap-sweswe-btvet
+}
+elsif( &Realm =="students.sweswe-btvet.sc.ug" ){
+    ldap-sweswe-btvet-students
+}
+elsif( &Realm =="mihs.ac.ug" ){
+    ldap-mihs
+}
+elsif( &Realm =="students.mihs.ac.ug" ){
+    ldap-mihs-students
+}
+elsif( &Realm =="centenarycollege.ac.ug" ){
+    ldap-centenary
+}
+elsif( &Realm =="students.centenarycollege.ac.ug" ){
+    ldap-centenary-students
+}
+elsif( &Realm =="primacy.ac.ug" ){
+    ldap-primacy
+}
+elsif( &Realm =="students.primacy.ac.ug" ){
+    ldap-primacy-students
+}
+elsif( &Realm =="mbaleschoolofhygiene.ac.ug" ){
+    ldap-sohygiene
+}
+elsif( &Realm =="students.mbaleschoolofhygiene.ac.ug" ){
+    ldap-sohygiene-students
+}
+elsif( &Realm =="stkagwabhs.ac.ug" ){
+    ldap-stkagwabhs
+}
+elsif( &Realm =="students.stkagwabhs.ac.ug" ){
+    ldap-stkagwabhs-students
+}
+elsif( &Realm =="stmarknursing.ac.ug" ){
+    ldap-stmarknursing
+}
+elsif( &Realm =="students.stmarknursing.ac.ug" ){
+    ldap-stmarknursing-students
+}
+elsif( &Realm =="merrylandhighschools.com" ){
+    ldap-merryland
+}
+elsif( &Realm =="students.merrylandhighschools.com" ){
+    ldap-merryland-students
+}
+elsif( &Realm =="mukisafoundation.org" ){
+    ldap-mukisafoundation
+}
+elsif( &Realm =="students.mukisafoundation.org" ){
+    ldap-mukisafoundation-students
+}
+elsif( &Realm =="sonams.ac.ug" ){
+    ldap-sonams
+}
+elsif( &Realm =="students.sonams.ac.ug" ){
+    ldap-sonams-students
+}
+elsif( &Realm =="stmichaelhighschool.ac.ug" ){
+    ldap-stmichael
+}
+elsif( &Realm =="students.stmichaelhighschool.ac.ug" ){
+    ldap-stmichael-students
+}
+elsif( &Realm =="healingwayafrica.com" ){
+    ldap-healingwayafrica
+}
+elsif( &Realm =="students.healingwayafrica.com" ){
+    ldap-healingwayafrica-students
+}
+elsif( &Realm =="stpeterandpaul.sc.ug" ){
+    ldap-stpeterandpaul
+}
+elsif( &Realm =="students.stpeterandpaul.sc.ug" ){
+    ldap-stpeterandpaul-students
+}
+elsif( &Realm =="urdt.net" ){
+    ldap-urdt
+}
+elsif( &Realm =="students.urdt.net" ){
+    ldap-urdt-students
+}
+elsif( &Realm =="utamu.ac.ug" ){
+    ldap-utamu
+}
+elsif( &Realm =="students.utamu.ac.ug" ){
+    ldap-utamu-students
+}
+elsif( &Realm =="amuguss.sc.ug" ){
+    ldap-amuguss
+}
+elsif( &Realm =="students.amuguss.sc.ug" ){
+    ldap-amuguss-students
+}
+elsif( &Realm =="fatimaaloigirls.sc.ug" ){
+    ldap-fatimaaloigirls
+}
+elsif( &Realm =="students.fatimaaloigirls.sc.ug" ){
+    ldap-fatimaaloigirls-students
+}
+elsif( &Realm =="apalass.sc.ug" ){
+    ldap-apalass
+}
+elsif( &Realm =="students.apalass.sc.ug" ){
+    ldap-apalass-students
+}
+elsif( &Realm =="ocociagirls.sc.ug" ){
+    ldap-ocociagirls
+}
+elsif( &Realm =="students.ocociagirls.sc.ug" ){
+    ldap-ocociagirls-students
+}
+elsif( &Realm =="allsaintsociba.sc.ug" ){
+    ldap-allsaintsociba
+}
+elsif( &Realm =="students.allsaintsociba.sc.ug" ){
+    ldap-allsaintsociba-students
+}
+elsif( &Realm =="kamerukaseed.sc.ug" ){
+    ldap-kamerukaseed
+}
+elsif( &Realm =="students.kamerukaseed.sc.ug" ){
+    ldap-kamerukaseed-students
+}
+elsif( &Realm =="buluchekess.sc.ug" ){
+    ldap-buluchekess
+}
+elsif( &Realm =="students.buluchekess.sc.ug" ){
+    ldap-buluchekess-students
+}
+elsif( &Realm =="stmarknaminya.sc.ug" ){
+    ldap-stmarknaminya
+}
+elsif( &Realm =="students.stmarknaminya.sc.ug" ){
+    ldap-stmarknaminya-students
+}
+elsif( &Realm =="3rss.sc.ug" ){
+    ldap-3rss
+}
+elsif( &Realm =="students.3rss.sc.ug" ){
+    ldap-3rss-students
+}
+elsif( &Realm =="bukhaluseed.sc.ug" ){
+    ldap-bukhaluseed
+}
+elsif( &Realm =="students.bukhaluseed.sc.ug" ){
+    ldap-bukhaluseed-students
+}
+elsif( &Realm =="rubonass.sc.ug" ){
+    ldap-rubonass
+}
+elsif( &Realm =="students.rubonass.sc.ug" ){
+    ldap-rubonass-students
+}
+elsif( &Realm =="comboniburungira.sc.ug" ){
+    ldap-comboniburungira
+}
+elsif( &Realm =="students.comboniburungira.sc.ug" ){
+    ldap-comboniburungira-students
+}
+elsif( &Realm =="stgonzagakagoma.sc.ug" ){
+    ldap-stgonzagakagoma
+}
+elsif( &Realm =="students.stgonzagakagoma.sc.ug" ){
+    ldap-stgonzagakagoma-students
+}
+elsif( &Realm =="kiiracollegebutiki.ac.ug" ){
+    ldap-kiiracollegebutiki
+}
+elsif( &Realm =="students.kiiracollegebutiki.ac.ug" ){
+    ldap-kiiracollegebutiki-students
+}
+elsif( &Realm =="pilkingtonmuguluka.sc.ug" ){
+    ldap-pilkingtonmuguluka
+}
+elsif( &Realm =="students.pilkingtonmuguluka.sc.ug" ){
+    ldap-pilkingtonmuguluka-students
+}
+elsif( &Realm =="lakealbertsda.sc.ug" ){
+    ldap-lakealbertsda
+}
+elsif( &Realm =="students.lakealbertsda.sc.ug" ){
+    ldap-lakealbertsda-students
+}
+elsif( &Realm =="stjosephskasambya.sc.ug" ){
+    ldap-stjosephskasambya
+}
+elsif( &Realm =="students.stjosephskasambya.sc.ug" ){
+    ldap-stjosephskasambya-students
+}
+elsif( &Realm =="otuboiss.sc.ug" ){
+    ldap-otuboiss
+}
+elsif( &Realm =="students.otuboiss.sc.ug" ){
+    ldap-otuboiss-students
+}
+elsif( &Realm =="stphillipsnawaikoke.sc.ug" ){
+    ldap-stphillipsnawaikoke
+}
+elsif( &Realm =="students.stphillipsnawaikoke.sc.ug" ){
+    ldap-stphillipsnawaikoke-students
+}
+elsif( &Realm =="kisaana.sc.ug" ){
+    ldap-kisaana
+}
+elsif( &Realm =="students.kisaana.sc.ug" ){
+    ldap-kisaana-students
+}
+elsif( &Realm =="kambuga.sc.ug" ){
+    ldap-kambuga
+}
+elsif( &Realm =="students.kambuga.sc.ug" ){
+    ldap-kambuga-students
+}
+elsif( &Realm =="mahangoseed.sc.ug" ){
+    ldap-mahangoseed
+}
+elsif( &Realm =="students.mahangoseed.sc.ug" ){
+    ldap-mahangoseed-students
+}
+elsif( &Realm =="stmatiamulumba.sc.ug" ){
+    ldap-stmatiamulumba
+}
+elsif( &Realm =="students.stmatiamulumba.sc.ug" ){
+    ldap-stmatiamulumba-students
+}
+elsif( &Realm =="kapekeseed.sc.ug" ){
+    ldap-kapekeseed
+}
+elsif( &Realm =="students.kapekeseed.sc.ug" ){
+    ldap-kapekeseed-students
+}
+elsif( &Realm =="busuulwamemorial.sc.ug" ){
+    ldap-busuulwamemorial
+}
+elsif( &Realm =="students.busuulwamemorial.sc.ug" ){
+    ldap-busuulwamemorial-students
+}
+elsif( &Realm =="francisayume.sc.ug" ){
+    ldap-francisayume
+}
+elsif( &Realm =="students.francisayume.sc.ug" ){
+    ldap-francisayume-students
+}
+elsif( &Realm =="ikweragirls.sc.ug" ){
+    ldap-ikweragirls
+}
+elsif( &Realm =="students.ikweragirls.sc.ug" ){
+    ldap-ikweragirls-students
+}
+elsif( &Realm =="kibogaparents.sc.ug" ){
+    ldap-kibogaparents
+}
+elsif( &Realm =="students.kibogaparents.sc.ug" ){
+    ldap-kibogaparents-students
+}
+elsif( &Realm =="aromovoc.sc.ug" ){
+    ldap-aromovoc
+}
+elsif( &Realm =="students.aromovoc.sc.ug" ){
+    ldap-aromovoc-students
+}
+elsif( &Realm =="buwamboseed.sc.ug" ){
+    ldap-buwamboseed
+}
+elsif( &Realm =="students.buwamboseed.sc.ug" ){
+    ldap-buwamboseed-students
+}
+elsif( &Realm =="ndejjevoc.sc.ug" ){
+    ldap-ndejjevoc
+}
+elsif( &Realm =="students.ndejjevoc.sc.ug" ){
+    ldap-ndejjevoc-students
+}
+elsif( &Realm =="lukoleseed.sc.ug" ){
+    ldap-lukoleseed
+}
+elsif( &Realm =="students.lukoleseed.sc.ug" ){
+    ldap-lukoleseed-students
+}
+elsif( &Realm =="mbiriiziseed.sc.ug" ){
+    ldap-mbiriiziseed
+}
+elsif( &Realm =="students.mbiriiziseed.sc.ug" ){
+    ldap-mbiriiziseed-students
+}
+elsif( &Realm =="stanthonykyazanga.sc.ug" ){
+    ldap-stanthonykyazanga
+}
+elsif( &Realm =="students.stanthonykyazanga.sc.ug" ){
+    ldap-stanthonykyazanga-students
+}
+elsif( &Realm =="lyantondekasambya.sc.ug" ){
+    ldap-lyantondekasambya
+}
+elsif( &Realm =="students.lyantondekasambya.sc.ug" ){
+    ldap-lyantondekasambya-students
+}
+elsif( &Realm =="nyangahya.sc.ug" ){
+    ldap-nyangahya
+}
+elsif( &Realm =="students.nyangahya.sc.ug" ){
+    ldap-nyangahya-students
+}
+elsif( &Realm =="kiyuya.sc.ug" ){
+    ldap-kiyuya
+}
+elsif( &Realm =="students.kiyuya.sc.ug" ){
+    ldap-kiyuya-students
+}
+elsif( &Realm =="kiyangavoc.sc.ug" ){
+    ldap-kiyangavoc
+}
+elsif( &Realm =="students.kiyangavoc.sc.ug" ){
+    ldap-kiyangavoc-students
+}
+elsif( &Realm =="stpetersbusubuzi.sc.ug" ){
+    ldap-stpetersbusubuzi
+}
+elsif( &Realm =="students.stpetersbusubuzi.sc.ug" ){
+    ldap-stpetersbusubuzi-students
+}
+elsif( &Realm =="mumsahigh.sc.ug" ){
+    ldap-mumsahigh
+}
+elsif( &Realm =="students.mumsahigh.sc.ug" ){
+    ldap-mumsahigh-students
+}
+elsif( &Realm =="ttamumoslim.sc.ug" ){
+    ldap-ttamumoslim
+}
+elsif( &Realm =="students.ttamumoslim.sc.ug" ){
+    ldap-ttamumoslim-students
+}
+# END Managed by Ansible - Authorization Block
+#        if( &Realm =="matabacus.ac.ug" ){
+#                ldap-Mat-Abacus
+#        }
+#        elsif( &Realm =="mbalehigh.sc.ug" ){
+#                ldap-Mbale-high
+#        }
+
+        suffix
+        expiration
+        logintime
+        pap
+# BEGIN Managed by Ansible - PAP Authorization Block
+if (User-Password) {
+  if ("%{Realm}" == "students.atyakseedss.sc.ug") {
+      update control {
+          Auth-Type := ldap-atyakseed-students
+      }
+  }
+  elsif ("%{Realm}" == "bulindiss.sc.ug") {
+      update control {
+          Auth-Type := ldap-bulindiss
+      }
+  }
+  elsif ("%{Realm}" == "students.bulindiss.sc.ug") {
+      update control {
+          Auth-Type := ldap-bulindiss-students
+      }
+  }
+  elsif ("%{Realm}" == "uneb.ac.ug") {
+      update control {
+          Auth-Type := ldap-uneb
+      }
+  }
+  elsif ("%{Realm}" == "students.uneb.ac.ug") {
+      update control {
+          Auth-Type := ldap-uneb-students
+      }
+  }
+  elsif ("%{Realm}" == "uvcf.ac.ug") {
+      update control {
+          Auth-Type := ldap-uvcf
+      }
+  }
+  elsif ("%{Realm}" == "students.uvcf.ac.ug") {
+      update control {
+          Auth-Type := ldap-uvcf-students
+      }
+  }
+  elsif ("%{Realm}" == "sweswe-btvet.sc.ug") {
+      update control {
+          Auth-Type := ldap-sweswe-btvet
+      }
+  }
+  elsif ("%{Realm}" == "students.sweswe-btvet.sc.ug") {
+      update control {
+          Auth-Type := ldap-sweswe-btvet-students
+      }
+  }
+  elsif ("%{Realm}" == "mihs.ac.ug") {
+      update control {
+          Auth-Type := ldap-mihs
+      }
+  }
+  elsif ("%{Realm}" == "students.mihs.ac.ug") {
+      update control {
+          Auth-Type := ldap-mihs-students
+      }
+  }
+  elsif ("%{Realm}" == "centenarycollege.ac.ug") {
+      update control {
+          Auth-Type := ldap-centenary
+      }
+  }
+  elsif ("%{Realm}" == "students.centenarycollege.ac.ug") {
+      update control {
+          Auth-Type := ldap-centenary-students
+      }
+  }
+  elsif ("%{Realm}" == "primacy.ac.ug") {
+      update control {
+          Auth-Type := ldap-primacy
+      }
+  }
+  elsif ("%{Realm}" == "students.primacy.ac.ug") {
+      update control {
+          Auth-Type := ldap-primacy-students
+      }
+  }
+  elsif ("%{Realm}" == "mbaleschoolofhygiene.ac.ug") {
+      update control {
+          Auth-Type := ldap-sohygiene
+      }
+  }
+  elsif ("%{Realm}" == "students.mbaleschoolofhygiene.ac.ug") {
+      update control {
+          Auth-Type := ldap-sohygiene-students
+      }
+  }
+  elsif ("%{Realm}" == "stkagwabhs.ac.ug") {
+      update control {
+          Auth-Type := ldap-stkagwabhs
+      }
+  }
+  elsif ("%{Realm}" == "students.stkagwabhs.ac.ug") {
+      update control {
+          Auth-Type := ldap-stkagwabhs-students
+      }
+  }
+  elsif ("%{Realm}" == "stmarknursing.ac.ug") {
+      update control {
+          Auth-Type := ldap-stmarknursing
+      }
+  }
+  elsif ("%{Realm}" == "students.stmarknursing.ac.ug") {
+      update control {
+          Auth-Type := ldap-stmarknursing-students
+      }
+  }
+  elsif ("%{Realm}" == "merrylandhighschools.com") {
+      update control {
+          Auth-Type := ldap-merryland
+      }
+  }
+  elsif ("%{Realm}" == "students.merrylandhighschools.com") {
+      update control {
+          Auth-Type := ldap-merryland-students
+      }
+  }
+  elsif ("%{Realm}" == "mukisafoundation.org") {
+      update control {
+          Auth-Type := ldap-mukisafoundation
+      }
+  }
+  elsif ("%{Realm}" == "students.mukisafoundation.org") {
+      update control {
+          Auth-Type := ldap-mukisafoundation-students
+      }
+  }
+  elsif ("%{Realm}" == "sonams.ac.ug") {
+      update control {
+          Auth-Type := ldap-sonams
+      }
+  }
+  elsif ("%{Realm}" == "students.sonams.ac.ug") {
+      update control {
+          Auth-Type := ldap-sonams-students
+      }
+  }
+  elsif ("%{Realm}" == "stmichaelhighschool.ac.ug") {
+      update control {
+          Auth-Type := ldap-stmichael
+      }
+  }
+  elsif ("%{Realm}" == "students.stmichaelhighschool.ac.ug") {
+      update control {
+          Auth-Type := ldap-stmichael-students
+      }
+  }
+  elsif ("%{Realm}" == "healingwayafrica.com") {
+      update control {
+          Auth-Type := ldap-healingwayafrica
+      }
+  }
+  elsif ("%{Realm}" == "students.healingwayafrica.com") {
+      update control {
+          Auth-Type := ldap-healingwayafrica-students
+      }
+  }
+  elsif ("%{Realm}" == "stpeterandpaul.sc.ug") {
+      update control {
+          Auth-Type := ldap-stpeterandpaul
+      }
+  }
+  elsif ("%{Realm}" == "students.stpeterandpaul.sc.ug") {
+      update control {
+          Auth-Type := ldap-stpeterandpaul-students
+      }
+  }
+  elsif ("%{Realm}" == "urdt.net") {
+      update control {
+          Auth-Type := ldap-urdt
+      }
+  }
+  elsif ("%{Realm}" == "students.urdt.net") {
+      update control {
+          Auth-Type := ldap-urdt-students
+      }
+  }
+  elsif ("%{Realm}" == "utamu.ac.ug") {
+      update control {
+          Auth-Type := ldap-utamu
+      }
+  }
+  elsif ("%{Realm}" == "students.utamu.ac.ug") {
+      update control {
+          Auth-Type := ldap-utamu-students
+      }
+  }
+  elsif ("%{Realm}" == "amuguss.sc.ug") {
+      update control {
+          Auth-Type := ldap-amuguss
+      }
+  }
+  elsif ("%{Realm}" == "students.amuguss.sc.ug") {
+      update control {
+          Auth-Type := ldap-amuguss-students
+      }
+  }
+  elsif ("%{Realm}" == "fatimaaloigirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-fatimaaloigirls
+      }
+  }
+  elsif ("%{Realm}" == "students.fatimaaloigirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-fatimaaloigirls-students
+      }
+  }
+  elsif ("%{Realm}" == "apalass.sc.ug") {
+      update control {
+          Auth-Type := ldap-apalass
+      }
+  }
+  elsif ("%{Realm}" == "students.apalass.sc.ug") {
+      update control {
+          Auth-Type := ldap-apalass-students
+      }
+  }
+  elsif ("%{Realm}" == "ocociagirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-ocociagirls
+      }
+  }
+  elsif ("%{Realm}" == "students.ocociagirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-ocociagirls-students
+      }
+  }
+  elsif ("%{Realm}" == "allsaintsociba.sc.ug") {
+      update control {
+          Auth-Type := ldap-allsaintsociba
+      }
+  }
+  elsif ("%{Realm}" == "students.allsaintsociba.sc.ug") {
+      update control {
+          Auth-Type := ldap-allsaintsociba-students
+      }
+  }
+  elsif ("%{Realm}" == "kamerukaseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-kamerukaseed
+      }
+  }
+  elsif ("%{Realm}" == "students.kamerukaseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-kamerukaseed-students
+      }
+  }
+  elsif ("%{Realm}" == "buluchekess.sc.ug") {
+      update control {
+          Auth-Type := ldap-buluchekess
+      }
+  }
+  elsif ("%{Realm}" == "students.buluchekess.sc.ug") {
+      update control {
+          Auth-Type := ldap-buluchekess-students
+      }
+  }
+  elsif ("%{Realm}" == "stmarknaminya.sc.ug") {
+      update control {
+          Auth-Type := ldap-stmarknaminya
+      }
+  }
+  elsif ("%{Realm}" == "students.stmarknaminya.sc.ug") {
+      update control {
+          Auth-Type := ldap-stmarknaminya-students
+      }
+  }
+  elsif ("%{Realm}" == "3rss.sc.ug") {
+      update control {
+          Auth-Type := ldap-3rss
+      }
+  }
+  elsif ("%{Realm}" == "students.3rss.sc.ug") {
+      update control {
+          Auth-Type := ldap-3rss-students
+      }
+  }
+  elsif ("%{Realm}" == "bukhaluseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-bukhaluseed
+      }
+  }
+  elsif ("%{Realm}" == "students.bukhaluseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-bukhaluseed-students
+      }
+  }
+  elsif ("%{Realm}" == "rubonass.sc.ug") {
+      update control {
+          Auth-Type := ldap-rubonass
+      }
+  }
+  elsif ("%{Realm}" == "students.rubonass.sc.ug") {
+      update control {
+          Auth-Type := ldap-rubonass-students
+      }
+  }
+  elsif ("%{Realm}" == "comboniburungira.sc.ug") {
+      update control {
+          Auth-Type := ldap-comboniburungira
+      }
+  }
+  elsif ("%{Realm}" == "students.comboniburungira.sc.ug") {
+      update control {
+          Auth-Type := ldap-comboniburungira-students
+      }
+  }
+  elsif ("%{Realm}" == "stgonzagakagoma.sc.ug") {
+      update control {
+          Auth-Type := ldap-stgonzagakagoma
+      }
+  }
+  elsif ("%{Realm}" == "students.stgonzagakagoma.sc.ug") {
+      update control {
+          Auth-Type := ldap-stgonzagakagoma-students
+      }
+  }
+  elsif ("%{Realm}" == "kiiracollegebutiki.ac.ug") {
+      update control {
+          Auth-Type := ldap-kiiracollegebutiki
+      }
+  }
+  elsif ("%{Realm}" == "students.kiiracollegebutiki.ac.ug") {
+      update control {
+          Auth-Type := ldap-kiiracollegebutiki-students
+      }
+  }
+  elsif ("%{Realm}" == "pilkingtonmuguluka.sc.ug") {
+      update control {
+          Auth-Type := ldap-pilkingtonmuguluka
+      }
+  }
+  elsif ("%{Realm}" == "students.pilkingtonmuguluka.sc.ug") {
+      update control {
+          Auth-Type := ldap-pilkingtonmuguluka-students
+      }
+  }
+  elsif ("%{Realm}" == "lakealbertsda.sc.ug") {
+      update control {
+          Auth-Type := ldap-lakealbertsda
+      }
+  }
+  elsif ("%{Realm}" == "students.lakealbertsda.sc.ug") {
+      update control {
+          Auth-Type := ldap-lakealbertsda-students
+      }
+  }
+  elsif ("%{Realm}" == "stjosephskasambya.sc.ug") {
+      update control {
+          Auth-Type := ldap-stjosephskasambya
+      }
+  }
+  elsif ("%{Realm}" == "students.stjosephskasambya.sc.ug") {
+      update control {
+          Auth-Type := ldap-stjosephskasambya-students
+      }
+  }
+  elsif ("%{Realm}" == "otuboiss.sc.ug") {
+      update control {
+          Auth-Type := ldap-otuboiss
+      }
+  }
+  elsif ("%{Realm}" == "students.otuboiss.sc.ug") {
+      update control {
+          Auth-Type := ldap-otuboiss-students
+      }
+  }
+  elsif ("%{Realm}" == "stphillipsnawaikoke.sc.ug") {
+      update control {
+          Auth-Type := ldap-stphillipsnawaikoke
+      }
+  }
+  elsif ("%{Realm}" == "students.stphillipsnawaikoke.sc.ug") {
+      update control {
+          Auth-Type := ldap-stphillipsnawaikoke-students
+      }
+  }
+  elsif ("%{Realm}" == "kisaana.sc.ug") {
+      update control {
+          Auth-Type := ldap-kisaana
+      }
+  }
+  elsif ("%{Realm}" == "students.kisaana.sc.ug") {
+      update control {
+          Auth-Type := ldap-kisaana-students
+      }
+  }
+  elsif ("%{Realm}" == "kambuga.sc.ug") {
+      update control {
+          Auth-Type := ldap-kambuga
+      }
+  }
+  elsif ("%{Realm}" == "students.kambuga.sc.ug") {
+      update control {
+          Auth-Type := ldap-kambuga-students
+      }
+  }
+  elsif ("%{Realm}" == "mahangoseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-mahangoseed
+      }
+  }
+  elsif ("%{Realm}" == "students.mahangoseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-mahangoseed-students
+      }
+  }
+  elsif ("%{Realm}" == "stmatiamulumba.sc.ug") {
+      update control {
+          Auth-Type := ldap-stmatiamulumba
+      }
+  }
+  elsif ("%{Realm}" == "students.stmatiamulumba.sc.ug") {
+      update control {
+          Auth-Type := ldap-stmatiamulumba-students
+      }
+  }
+  elsif ("%{Realm}" == "kapekeseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-kapekeseed
+      }
+  }
+  elsif ("%{Realm}" == "students.kapekeseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-kapekeseed-students
+      }
+  }
+  elsif ("%{Realm}" == "busuulwamemorial.sc.ug") {
+      update control {
+          Auth-Type := ldap-busuulwamemorial
+      }
+  }
+  elsif ("%{Realm}" == "students.busuulwamemorial.sc.ug") {
+      update control {
+          Auth-Type := ldap-busuulwamemorial-students
+      }
+  }
+  elsif ("%{Realm}" == "francisayume.sc.ug") {
+      update control {
+          Auth-Type := ldap-francisayume
+      }
+  }
+  elsif ("%{Realm}" == "students.francisayume.sc.ug") {
+      update control {
+          Auth-Type := ldap-francisayume-students
+      }
+  }
+  elsif ("%{Realm}" == "ikweragirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-ikweragirls
+      }
+  }
+  elsif ("%{Realm}" == "students.ikweragirls.sc.ug") {
+      update control {
+          Auth-Type := ldap-ikweragirls-students
+      }
+  }
+  elsif ("%{Realm}" == "kibogaparents.sc.ug") {
+      update control {
+          Auth-Type := ldap-kibogaparents
+      }
+  }
+  elsif ("%{Realm}" == "students.kibogaparents.sc.ug") {
+      update control {
+          Auth-Type := ldap-kibogaparents-students
+      }
+  }
+  elsif ("%{Realm}" == "aromovoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-aromovoc
+      }
+  }
+  elsif ("%{Realm}" == "students.aromovoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-aromovoc-students
+      }
+  }
+  elsif ("%{Realm}" == "buwamboseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-buwamboseed
+      }
+  }
+  elsif ("%{Realm}" == "students.buwamboseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-buwamboseed-students
+      }
+  }
+  elsif ("%{Realm}" == "ndejjevoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-ndejjevoc
+      }
+  }
+  elsif ("%{Realm}" == "students.ndejjevoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-ndejjevoc-students
+      }
+  }
+  elsif ("%{Realm}" == "lukoleseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-lukoleseed
+      }
+  }
+  elsif ("%{Realm}" == "students.lukoleseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-lukoleseed-students
+      }
+  }
+  elsif ("%{Realm}" == "mbiriiziseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-mbiriiziseed
+      }
+  }
+  elsif ("%{Realm}" == "students.mbiriiziseed.sc.ug") {
+      update control {
+          Auth-Type := ldap-mbiriiziseed-students
+      }
+  }
+  elsif ("%{Realm}" == "stanthonykyazanga.sc.ug") {
+      update control {
+          Auth-Type := ldap-stanthonykyazanga
+      }
+  }
+  elsif ("%{Realm}" == "students.stanthonykyazanga.sc.ug") {
+      update control {
+          Auth-Type := ldap-stanthonykyazanga-students
+      }
+  }
+  elsif ("%{Realm}" == "lyantondekasambya.sc.ug") {
+      update control {
+          Auth-Type := ldap-lyantondekasambya
+      }
+  }
+  elsif ("%{Realm}" == "students.lyantondekasambya.sc.ug") {
+      update control {
+          Auth-Type := ldap-lyantondekasambya-students
+      }
+  }
+  elsif ("%{Realm}" == "nyangahya.sc.ug") {
+      update control {
+          Auth-Type := ldap-nyangahya
+      }
+  }
+  elsif ("%{Realm}" == "students.nyangahya.sc.ug") {
+      update control {
+          Auth-Type := ldap-nyangahya-students
+      }
+  }
+  elsif ("%{Realm}" == "kiyuya.sc.ug") {
+      update control {
+          Auth-Type := ldap-kiyuya
+      }
+  }
+  elsif ("%{Realm}" == "students.kiyuya.sc.ug") {
+      update control {
+          Auth-Type := ldap-kiyuya-students
+      }
+  }
+  elsif ("%{Realm}" == "kiyangavoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-kiyangavoc
+      }
+  }
+  elsif ("%{Realm}" == "students.kiyangavoc.sc.ug") {
+      update control {
+          Auth-Type := ldap-kiyangavoc-students
+      }
+  }
+  elsif ("%{Realm}" == "stpetersbusubuzi.sc.ug") {
+      update control {
+          Auth-Type := ldap-stpetersbusubuzi
+      }
+  }
+  elsif ("%{Realm}" == "students.stpetersbusubuzi.sc.ug") {
+      update control {
+          Auth-Type := ldap-stpetersbusubuzi-students
+      }
+  }
+  elsif ("%{Realm}" == "mumsahigh.sc.ug") {
+      update control {
+          Auth-Type := ldap-mumsahigh
+      }
+  }
+  elsif ("%{Realm}" == "students.mumsahigh.sc.ug") {
+      update control {
+          Auth-Type := ldap-mumsahigh-students
+      }
+  }
+  elsif ("%{Realm}" == "ttamumoslim.sc.ug") {
+      update control {
+          Auth-Type := ldap-ttamumoslim
+      }
+  }
+  elsif ("%{Realm}" == "students.ttamumoslim.sc.ug") {
+      update control {
+          Auth-Type := ldap-ttamumoslim-students
+      }
+  }
+}
+# END Managed by Ansible - PAP Authorization Block
+#        if (User-Password) {
+#        if ("%{Realm}" == "matabacus.ac.ug") {
+#            update control {
+#                Auth-Type := ldap-Mat-Abacus
+#            }
+#        }
+#        elsif ("%{Realm}" == "mbalehigh.sc.ug") {
+#            update control {
+#                Auth-Type := ldap-Mbale-high
+#            }
+#        }
+#}
+
+        Autz-Type New-TLS-Connection {
+            ok
+        }
+    }
+
+    authenticate {
+        Auth-Type PAP {
+# BEGIN Managed by Ansible - Auth-Type PAP
+    ldap-atyakseed-students
+    ldap-bulindiss
+    ldap-bulindiss-students
+    ldap-uneb
+    ldap-uneb-students
+    ldap-uvcf
+    ldap-uvcf-students
+    ldap-sweswe-btvet
+    ldap-sweswe-btvet-students
+    ldap-mihs
+    ldap-mihs-students
+    ldap-centenary
+    ldap-centenary-students
+    ldap-primacy
+    ldap-primacy-students
+    ldap-sohygiene
+    ldap-sohygiene-students
+    ldap-stkagwabhs
+    ldap-stkagwabhs-students
+    ldap-stmarknursing
+    ldap-stmarknursing-students
+    ldap-merryland
+    ldap-merryland-students
+    ldap-mukisafoundation
+    ldap-mukisafoundation-students
+    ldap-sonams
+    ldap-sonams-students
+    ldap-stmichael
+    ldap-stmichael-students
+    ldap-healingwayafrica
+    ldap-healingwayafrica-students
+    ldap-stpeterandpaul
+    ldap-stpeterandpaul-students
+    ldap-urdt
+    ldap-urdt-students
+    ldap-utamu
+    ldap-utamu-students
+    ldap-amuguss
+    ldap-amuguss-students
+    ldap-fatimaaloigirls
+    ldap-fatimaaloigirls-students
+    ldap-apalass
+    ldap-apalass-students
+    ldap-ocociagirls
+    ldap-ocociagirls-students
+    ldap-allsaintsociba
+    ldap-allsaintsociba-students
+    ldap-kamerukaseed
+    ldap-kamerukaseed-students
+    ldap-buluchekess
+    ldap-buluchekess-students
+    ldap-stmarknaminya
+    ldap-stmarknaminya-students
+    ldap-3rss
+    ldap-3rss-students
+    ldap-bukhaluseed
+    ldap-bukhaluseed-students
+    ldap-rubonass
+    ldap-rubonass-students
+    ldap-comboniburungira
+    ldap-comboniburungira-students
+    ldap-stgonzagakagoma
+    ldap-stgonzagakagoma-students
+    ldap-kiiracollegebutiki
+    ldap-kiiracollegebutiki-students
+    ldap-pilkingtonmuguluka
+    ldap-pilkingtonmuguluka-students
+    ldap-lakealbertsda
+    ldap-lakealbertsda-students
+    ldap-stjosephskasambya
+    ldap-stjosephskasambya-students
+    ldap-otuboiss
+    ldap-otuboiss-students
+    ldap-stphillipsnawaikoke
+    ldap-stphillipsnawaikoke-students
+    ldap-kisaana
+    ldap-kisaana-students
+    ldap-kambuga
+    ldap-kambuga-students
+    ldap-mahangoseed
+    ldap-mahangoseed-students
+    ldap-stmatiamulumba
+    ldap-stmatiamulumba-students
+    ldap-kapekeseed
+    ldap-kapekeseed-students
+    ldap-busuulwamemorial
+    ldap-busuulwamemorial-students
+    ldap-francisayume
+    ldap-francisayume-students
+    ldap-ikweragirls
+    ldap-ikweragirls-students
+    ldap-kibogaparents
+    ldap-kibogaparents-students
+    ldap-aromovoc
+    ldap-aromovoc-students
+    ldap-buwamboseed
+    ldap-buwamboseed-students
+    ldap-ndejjevoc
+    ldap-ndejjevoc-students
+    ldap-lukoleseed
+    ldap-lukoleseed-students
+    ldap-mbiriiziseed
+    ldap-mbiriiziseed-students
+    ldap-stanthonykyazanga
+    ldap-stanthonykyazanga-students
+    ldap-lyantondekasambya
+    ldap-lyantondekasambya-students
+    ldap-nyangahya
+    ldap-nyangahya-students
+    ldap-kiyuya
+    ldap-kiyuya-students
+    ldap-kiyangavoc
+    ldap-kiyangavoc-students
+    ldap-stpetersbusubuzi
+    ldap-stpetersbusubuzi-students
+    ldap-mumsahigh
+    ldap-mumsahigh-students
+    ldap-ttamumoslim
+    ldap-ttamumoslim-students
+# END Managed by Ansible - Auth-Type PAP
+#                ldap-Mat-Abacus
+#                ldap-Mbale-high
+        }
+        Auth-Type CHAP {
+            chap
+        }
+        Auth-Type MS-CHAP {
+            mschap
+        }
+        mschap
+        digest
+# BEGIN Managed by Ansible - After EAP
+    ldap-atyakseed-students
+    ldap-bulindiss
+    ldap-bulindiss-students
+    ldap-uneb
+    ldap-uneb-students
+    ldap-uvcf
+    ldap-uvcf-students
+    ldap-sweswe-btvet
+    ldap-sweswe-btvet-students
+    ldap-mihs
+    ldap-mihs-students
+    ldap-centenary
+    ldap-centenary-students
+    ldap-primacy
+    ldap-primacy-students
+    ldap-sohygiene
+    ldap-sohygiene-students
+    ldap-stkagwabhs
+    ldap-stkagwabhs-students
+    ldap-stmarknursing
+    ldap-stmarknursing-students
+    ldap-merryland
+    ldap-merryland-students
+    ldap-mukisafoundation
+    ldap-mukisafoundation-students
+    ldap-sonams
+    ldap-sonams-students
+    ldap-stmichael
+    ldap-stmichael-students
+    ldap-healingwayafrica
+    ldap-healingwayafrica-students
+    ldap-stpeterandpaul
+    ldap-stpeterandpaul-students
+    ldap-urdt
+    ldap-urdt-students
+    ldap-utamu
+    ldap-utamu-students
+    ldap-amuguss
+    ldap-amuguss-students
+    ldap-fatimaaloigirls
+    ldap-fatimaaloigirls-students
+    ldap-apalass
+    ldap-apalass-students
+    ldap-ocociagirls
+    ldap-ocociagirls-students
+    ldap-allsaintsociba
+    ldap-allsaintsociba-students
+    ldap-kamerukaseed
+    ldap-kamerukaseed-students
+    ldap-buluchekess
+    ldap-buluchekess-students
+    ldap-stmarknaminya
+    ldap-stmarknaminya-students
+    ldap-3rss
+    ldap-3rss-students
+    ldap-bukhaluseed
+    ldap-bukhaluseed-students
+    ldap-rubonass
+    ldap-rubonass-students
+    ldap-comboniburungira
+    ldap-comboniburungira-students
+    ldap-stgonzagakagoma
+    ldap-stgonzagakagoma-students
+    ldap-kiiracollegebutiki
+    ldap-kiiracollegebutiki-students
+    ldap-pilkingtonmuguluka
+    ldap-pilkingtonmuguluka-students
+    ldap-lakealbertsda
+    ldap-lakealbertsda-students
+    ldap-stjosephskasambya
+    ldap-stjosephskasambya-students
+    ldap-otuboiss
+    ldap-otuboiss-students
+    ldap-stphillipsnawaikoke
+    ldap-stphillipsnawaikoke-students
+    ldap-kisaana
+    ldap-kisaana-students
+    ldap-kambuga
+    ldap-kambuga-students
+    ldap-mahangoseed
+    ldap-mahangoseed-students
+    ldap-stmatiamulumba
+    ldap-stmatiamulumba-students
+    ldap-kapekeseed
+    ldap-kapekeseed-students
+    ldap-busuulwamemorial
+    ldap-busuulwamemorial-students
+    ldap-francisayume
+    ldap-francisayume-students
+    ldap-ikweragirls
+    ldap-ikweragirls-students
+    ldap-kibogaparents
+    ldap-kibogaparents-students
+    ldap-aromovoc
+    ldap-aromovoc-students
+    ldap-buwamboseed
+    ldap-buwamboseed-students
+    ldap-ndejjevoc
+    ldap-ndejjevoc-students
+    ldap-lukoleseed
+    ldap-lukoleseed-students
+    ldap-mbiriiziseed
+    ldap-mbiriiziseed-students
+    ldap-stanthonykyazanga
+    ldap-stanthonykyazanga-students
+    ldap-lyantondekasambya
+    ldap-lyantondekasambya-students
+    ldap-nyangahya
+    ldap-nyangahya-students
+    ldap-kiyuya
+    ldap-kiyuya-students
+    ldap-kiyangavoc
+    ldap-kiyangavoc-students
+    ldap-stpetersbusubuzi
+    ldap-stpetersbusubuzi-students
+    ldap-mumsahigh
+    ldap-mumsahigh-students
+    ldap-ttamumoslim
+    ldap-ttamumoslim-students
+# END Managed by Ansible - After EAP
+        eap
+#        ldap-Mat-Abacus
+#        ldap-Mbale-high
+    }
+
+    preacct {
+        preprocess
+        acct_unique
+        suffix
+        files
+    }
+
+    accounting {
+        detail
+        exec
+        attr_filter.accounting_response
+        -sql
+    }
+
+    session {
+    }
+
+    post-auth {
+        if (session-state:User-Name && reply:User-Name && request:User-Name && (reply:User-Name == request:User-Name)) {
+            update reply {
+                &User-Name !* ANY
+            }
+        }
+        update {
+            &reply: += &session-state:
+        }
+        remove_reply_message_if_eap
+        -sql
+        exec
+        if (EAP-Key-Name && &reply:EAP-Session-Id) {
+            update reply {
+                &EAP-Key-Name := &reply:EAP-Session-Id
+            }
+        }
+    }
+}
+

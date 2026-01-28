@@ -1,0 +1,6 @@
+PASSWORD_SERVER	= 'Idpt3st2'
+PASSWORD_INNER	= 'whatever'
+PASSWORD_CA	= 'Idpt3st2'
+PASSWORD_CLIENT	= 'Idpt3st2'
+USER_NAME	= 'systems@renu.ac.ug'
+CA_DEFAULT_DAYS  = '3600'

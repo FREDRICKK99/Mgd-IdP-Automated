@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Set paths
-CSV_FILE="/home/Mgd-IdP/schools.csv"
+#CSV_FILE="/home/Mgd-IdP/schools.csv"
+CSV_FILE="/home/Mgd-IdP/final.csv"
 ANSIBLE_PLAYBOOK="/home/Mgd-IdP/mgd-idp-automation.yml"
 INVENTORY="/home/Mgd-IdP/inventory.ini"
 GENERATED_DIR="/home/Mgd-IdP/generated"
@@ -22,7 +23,7 @@ HEADER=$(head -n 1 "$CSV_FILE")
 
 # ✅ Split the CSV into smaller files (excluding the header in splits)
 echo "📝 Splitting CSV into batches..."
-tail -n +2 "$CSV_FILE" | split -l 50 --additional-suffix=.csv - "$SPLIT_DIR/schools_"
+tail -n +2 "$CSV_FILE" | split -l 119 --additional-suffix=.csv - "$SPLIT_DIR/schools_"
 
 # ✅ Add the header back to each split file
 for file in "$SPLIT_DIR"/schools_*.csv; do
